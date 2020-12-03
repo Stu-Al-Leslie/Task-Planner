@@ -85,8 +85,8 @@ function createTaskObject(name, description, assignee, date) {
 let dataReturned = localStorage.getItem("taskArray");
 
     if(dataReturned){
-        myTaskManager.allTasks = JSON.parse(dataReturned);
-        populatePage(myTaskManager.allTasks)
+        globalTaskArray = JSON.parse(dataReturned);
+        populatePage(globalTaskArray)
     } else {
         globalTaskArray = [];
     }
